@@ -6,7 +6,7 @@
 import pymel.core as pm
 import maya.cmds as cmds
 
-sel = pm.ls( sl = True )
+sel = pm.selected()
 
 // ここにプレフィックスを入力
 //nsAbc = "test"
