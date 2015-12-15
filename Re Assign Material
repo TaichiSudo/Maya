@@ -1,10 +1,15 @@
+// 使い方
+// 元のアセットのネームスペースを nsMaya に書き込んでください。
+// 次にアサインし直したいいオブジェクトを選択して実行。それだけです。
+
+
 import pymel.core as pm
 import maya.cmds as cmds
 
 sel = pm.ls( sl = True )
 
 // ここにプレフィックスを入力
-nsAbc = "test"
+//nsAbc = "test"
 nsMaya = "treeHero:"
 
 for obj in sel:
