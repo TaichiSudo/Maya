@@ -1,0 +1,17 @@
+import pymel.core as pm
+import maya.cmds as cmds
+
+sel = pm.ls( sl = True )
+
+nsAbc = "test"
+nsMaya = "treeHero:"
+
+for obj in sel:
+    abcShapeNode = obj.getShapes()
+    refShapeNode = nsMaya + abcShapeNode[0][15:]
+    print( "abc:" + abcShapeNode[0] )
+    print( "refShapeNode:" + refShapeNode )
+    print( "SG:" + sg[0] )
+
+    sg = cmds.listConnections( refShapeNode, s = False, d = True, type = 'shadingEngine')
+    cmds.sets( str(abcShapeNode[0]),  fe = sg[0] )
