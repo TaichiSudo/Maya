@@ -1,3 +1,5 @@
+// 選択したオブジェクトをランダムに回転させるMel
+
 global proc randRot()
 {
 	string $sel[] = `ls -sl`;
