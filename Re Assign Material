@@ -3,11 +3,14 @@ import maya.cmds as cmds
 
 sel = pm.ls( sl = True )
 
+// ここにプレフィックスを入力
 nsAbc = "test"
 nsMaya = "treeHero:"
 
 for obj in sel:
     abcShapeNode = obj.getShapes()
+    // プレフィックスが何文字かを手入力
+    // 次のバージョンで自動化予定
     refShapeNode = nsMaya + abcShapeNode[0][15:]
     print( "abc:" + abcShapeNode[0] )
     print( "refShapeNode:" + refShapeNode )
