@@ -15,4 +15,8 @@ i="${#dirary[@]}"-1
 echo "${dirary[$i]}"
 
 #path="/ppi/Ydrv/shots/"$ep"/"$sq"/"$sh"/work/"$user"/compout/"$r
-/opt/rv-Linux-x86-64-7.2.0/bin/rv ${dirary[$i]} &
+if [ -e ${dirary[$i]} ]; then
+	/opt/rv-Linux-x86-64-7.2.0/bin/rv ${dirary[$i]} &
+else
+	echo "${dirary[$i]} not found."
+fi
