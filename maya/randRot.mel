@@ -1,0 +1,17 @@
+// 選択したオブジェクトをランダムに回転させるMel
+
+global proc randRot()
+{
+	string $sel[] = `ls -sl`;
+
+	for ($obj in $sel)
+	{
+		select -cl;
+		select -r $obj;
+		$rndRotX = `rand 0 360`;
+		$rndRotY = `rand 0 360`;
+		$rndRotZ = `rand 0 360`;
+		rotate -r -os $rndRotX $rndRotY $rndRotZ;
+	}
+	select $sel;
+}
