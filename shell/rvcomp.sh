@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#prefixを設定
 ep=ZERO$1
 sq=$2
 sh=$3
